@@ -3,20 +3,20 @@ const mongoose = require("mongoose")
 const UserScheme = new mongoose.Schema(
     {
         name:{
-            type:String
+            type:String //se guaradara el nombre de los usuarios como un dato tipo string
         },
         age:{
-            type:Number
+            type:Number //se guardara la edad como un dato de tipo numero
         },
         email:{
-            unique:true
+            unique:true //se guardara el email como un dato unico, no se puede repetir
         },
         password:{
-            type:String
+            type:String //se guardara el password como un dato de tipo string
         },
         role:{
-            type:["user","admin"],
-            default: "user",
+            type:["user","admin"], //se pueden crear usuarios con estos dos tipos de roles
+            default: "user", // si no se asigna un rol se agregara con el rol de user por defecto
         },
     },
     {

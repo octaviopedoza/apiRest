@@ -3,10 +3,10 @@ const mongoose = require("mongoose")
 const StorageScheme = new mongoose.Schema(
     {
         url:{
-            type:String
+            type:String //dato de la url de un archivo
         },
         filename:{
-            type:String
+            type:String //dato del nombre del archivo
         }
     },
     {
