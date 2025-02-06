@@ -6,6 +6,7 @@ const dbConnect = require('./config/mongoose') //declaramos la constante de conc
 const app = express()
 
 app.use(cors()) //asignamos el uso de la libreria de cors dentro de la aplicacion web
+app.use(express.json()) //sirve para que nuestra app este preparada para recibir información por POST
 
 const port = process.env.PORT || 3000 //constante que declara el puerto a utilizar para la conexion
 
@@ -14,6 +15,7 @@ const port = process.env.PORT || 3000 //constante que declara el puerto a utiliz
  */
 //Todo localhost/api/________
 app.use("/api", require("./routes")) 
+
 
 /**
  * Aqui declaramos la funcion inicial

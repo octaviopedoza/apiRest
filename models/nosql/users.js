@@ -1,3 +1,4 @@
+const { type } = require("express/lib/response")
 const mongoose = require("mongoose")
 
 const UserScheme = new mongoose.Schema(
@@ -9,6 +10,7 @@ const UserScheme = new mongoose.Schema(
             type:Number //se guardara la edad como un dato de tipo numero
         },
         email:{
+            type:String,
             unique:true //se guardara el email como un dato unico, no se puede repetir
         },
         password:{
