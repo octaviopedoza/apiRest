@@ -7,6 +7,7 @@ const app = express()
 
 app.use(cors()) //asignamos el uso de la libreria de cors dentro de la aplicacion web
 app.use(express.json()) //sirve para que nuestra app este preparada para recibir información por POST
+app.use(express.static('storage'))
 
 const port = process.env.PORT || 3000 //constante que declara el puerto a utilizar para la conexion
 
